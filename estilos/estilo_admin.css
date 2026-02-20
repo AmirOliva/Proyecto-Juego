@@ -1,0 +1,95 @@
+
+:root {
+    --gris-fondo: #f4f7f6;
+    --azul-oscuro: #34495e;
+    --azul-hover: #2c3e50;
+    --texto: #333;
+    --blanco: #ffffff;
+}
+
+body.cuerpo-panel {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--gris-fondo);
+    color: var(--texto);
+}
+
+.contenedor-dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Barra Lateral */
+.barra-lateral {
+    width: 250px;
+    background-color: var(--azul-oscuro);
+    color: white;
+    padding: 25px 20px;
+    flex-shrink: 0;
+}
+
+.titulo-panel {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 15px;
+}
+
+.menu-navegacion a {
+    display: block;
+    color: #bdc3c7;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.3s;
+}
+
+.menu-navegacion a:hover, 
+.menu-navegacion a.activo {
+    background-color: var(--azul-hover);
+    color: white;
+}
+
+/* Área de Contenido */
+.contenido-principal {
+    flex: 1;
+    padding: 30px;
+}
+
+.barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    background: var(--blanco);
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+/* Tarjetas */
+.rejilla-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.icono-tarjeta { font-size: 2.2rem; margin-right: 20px; }
+.info-tarjeta h3 { margin: 0; font-size: 0.85rem; color: #7f8c8d; text-transform: uppercase; }
+.info-tarjeta p { margin: 5px 0 0; font-size: 1.4rem; font-weight: 700; }
+
+.borde-azul { border-left: 6px solid #3498db; }
+.borde-rojo { border-left: 6px solid #e74c3c; }
+.borde-verde { border-left: 6px solid #2ecc71; }
+.borde-amarillo { border-left: 6px solid #f1c40f; }
